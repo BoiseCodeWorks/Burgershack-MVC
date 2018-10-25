@@ -28,5 +28,29 @@ namespace Burgershack.Data
                 Description = "Pineapple YUM!!!"
             },
         };
+
+        public static List<Drink> Drinks = new List<Drink>() {
+            new Drink()
+        {
+            Id = 1,
+                Name = "water",
+                Price = 1.99m,
+                Description = "Delicious yet lacking somehow"
+            },
+            new Drink()
+        {
+            Id = 2,
+                Name = "Queso",
+                Price = 8.99m,
+                Description = "Delicioso"
+            },
+            new Drink()
+        {
+            Id = 3,
+                Name = "Hawaiian",
+                Price = 12.99m,
+                Description = "Pineapple Juice YUM!!!"
+            },
+        };
     }
 }

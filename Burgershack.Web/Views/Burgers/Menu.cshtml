@@ -1,0 +1,70 @@
+﻿@model Burgershack.Web.Models.Menu
+
+<div>
+    <h4>Menu</h4>
+    <hr />
+    <h6>Burgers</h6>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Burgers)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h6>Drinks</h6>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Drinks)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -14,10 +14,12 @@ namespace Burgershack.Web.Controllers
     public class BurgersController : Controller
     {
         private readonly BurgersService _bs;
+        private DrinksService _ds;
 
-        public BurgersController(BurgersService bs)
+        public BurgersController(BurgersService bs, DrinksService ds)
         {
             _bs = bs;
+            _ds = ds;
         }
 
         // GET: Burgers
@@ -25,6 +27,18 @@ namespace Burgershack.Web.Controllers
         {
             return View(_bs.GetAll());
         }
+
+
+        public IActionResult Menu()
+        {
+            var menu = new Menu()
+            {
+                Burgers = _bs.GetAll(),
+                Drinks = _ds.GetAll()
+            };
+            return View(menu);
+        }
+
 
         // GET: Burgers/Details/5
         public IActionResult Details(int id)
